@@ -10,8 +10,7 @@ export const store = reactive({
     callAxios(call) {
       axios.get(call)
       .then(response => {
-        console.log(response.data.results);
-        this. projects = response.data.results.data;
+        this. projects = response.data.results;
         this.loading = false
       })
       .catch(error => {
@@ -21,12 +20,20 @@ export const store = reactive({
       })
     },
     getImagePath(path) {
-      console.log(path);
+      
       if (path) {
         return this.base_api_url + '/storage/' + path
       }
       return '/img/placeholder.png'
     },
+    prevPage(url) {
+      
+      store.callAxios(url)
+    },
+    nextPage(url) {
+      
+      store.callAxios(url)
+    }
   
   
   })
