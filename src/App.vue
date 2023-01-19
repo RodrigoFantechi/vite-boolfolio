@@ -27,7 +27,7 @@ export default {
                         :cover_image='project.cover_image'
                         :description='project.description'
                         :type='project.type'
-                        :technology='project.technology'
+                        :technologies='project.technologies'
                         />
             </div>
 
