@@ -16,7 +16,7 @@ export default {
 </script>
 
 <template>
-  <div class="container pt-5">
+  <div class="container py-5">
       <div class="single-post d-flex justify-content-center flex-column text-center" v-if="store.projects">
         <img class="mx-auto" width="350" :src="store.getImagePath(store.projects.cover_image)" :alt="store.projects.title">
         <div class="container">

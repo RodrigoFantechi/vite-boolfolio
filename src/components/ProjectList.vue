@@ -20,9 +20,9 @@ export default {
 </script>
 <template>
     <main>
-        <div class="container p-5">
+        <div class="container p-5 ">
             <section v-if="store.projects && !store.loading">
-                <div class="row">
+                <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-4">
                     <ProjectCard v-for="project in store.projects.data" :title='project.title'
                         :cover_image='project.cover_image' :description='project.description' :type='project.type'
                         :technologies='project.technologies' :slug="project.slug" />
@@ -48,7 +48,7 @@ export default {
                     </ul>
                 </nav>
             </section>
-            <section v-else-if="store.loading" class="position-fixed top-50 start-50 translate-middle">
+            <section v-else-if="store.loading">
                 <div class="div">
                     <span class="fs-3">Loading...</span>
                     <div class="svg ms-3 d-inline-block">
@@ -76,5 +76,7 @@ export default {
     </main>
 </template>
 <style lang="scss" scoped>
-
+// main{
+//     background-image: url(/img/pattern1.png);
+// }
 </style>

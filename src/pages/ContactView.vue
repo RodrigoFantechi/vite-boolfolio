@@ -8,7 +8,7 @@ export default {
 <template>
 
 
-  <div class="container pt-5">
+  <div class="container py-5">
     <h1>Contact Me</h1> 
     <p class="lead">
       Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero, adipisci optio, tempore maiores sit asperiores
