@@ -1,2 +1,19 @@
 // Import all of Bootstrap's CSS
 @import "/node_modules/bootstrap/scss/bootstrap";
+
+img{
+    max-width: 100%;
+}
+
+.card{
+    .image{
+        width: 150px;
+        height: 150px;
+
+        img{
+            width: 100%;
+            aspect-ratio: 1/1;
+            object-fit: cover;
+        }
+    }
+}

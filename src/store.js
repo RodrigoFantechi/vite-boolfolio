@@ -1,7 +1,7 @@
 import { reactive } from 'vue'
 import axios from 'axios'
 export const store = reactive({
-  
+    max: 100,
     projects: '',
     loading: true,
     base_api_url: 'http://127.0.0.1:8000',
@@ -33,7 +33,13 @@ export const store = reactive({
     nextPage(url) {
       
       store.callAxios(url)
-    }
+    },
+    trimBody(text) {
+      if (text.length > store.max) {
+        return text.slice(0, store.max) + '...'
+      }
+      return text
+    },
   
   
   })
