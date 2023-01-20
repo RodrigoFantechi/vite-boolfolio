@@ -1,13 +1,13 @@
 
 <script>
 export default {
-    name: 'AppHeader',
+    name: 'AppFooter',
 }
 </script>
 <template>
-    <div>
+    <footer>
         
-    </div>
+    </footer>
 </template>
 <style lang="scss" scoped>
     
