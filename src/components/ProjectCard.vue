@@ -10,6 +10,7 @@ export default {
         description: String,
         type: Object,
         technologies: Array,
+        slug: String,
     },
     data() {
         return {
@@ -26,14 +27,15 @@ export default {
             </div>
             <div class="details my-4">
                 <h4>{{ title }}</h4>
-                <h6>{{ description }}</h6>
+                <p>{{ store.checkText(description) }}</p>
                 <p v-if="type">Tipo: {{ type.name }}</p>
                 <p v-else>Tipo: Nessun tipo associato</p>
-                <div v-if="technologies.length > 0">
+                <div v-if="technologies.length > 0" class="my-3">
                     <span>Tecnologie:</span>
                     <span v-for="singletechnology in technologies" class="mx-1">{{ singletechnology.name }},</span>
                 </div>
                 <p v-else >Tecnologie: Nessuna tecnologia associata</p>
+                <router-link class="btn btn-primary" :to="{ name: 'single-project', params: { slug: slug } }">Read more</router-link>
             </div>
         </div>
     </div>

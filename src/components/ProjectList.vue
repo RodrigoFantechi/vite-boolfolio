@@ -25,7 +25,7 @@ export default {
                 <div class="row">
                     <ProjectCard v-for="project in store.projects.data" :title='project.title'
                         :cover_image='project.cover_image' :description='project.description' :type='project.type'
-                        :technologies='project.technologies' />
+                        :technologies='project.technologies' :slug="project.slug" />
                 </div>
                 <nav aria-label="Page navigation" class="d-flex justify-content-center pt-5">
                     <ul class="pagination    ">

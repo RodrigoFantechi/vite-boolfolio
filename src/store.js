@@ -10,6 +10,7 @@ export const store = reactive({
     callAxios(call) {
       axios.get(call)
       .then(response => {
+        console.log(response);
         this. projects = response.data.results;
         this.loading = false
       })
@@ -34,7 +35,7 @@ export const store = reactive({
       
       store.callAxios(url)
     },
-    trimBody(text) {
+    checkText(text) {
       if (text.length > store.max) {
         return text.slice(0, store.max) + '...'
       }

@@ -3,6 +3,7 @@ import HomeView from './pages/HomeView.vue'
 import ContactView from './pages/ContactView.vue'
 import AboutView from './pages/AboutView.vue'
 import ProjectsView from './pages/ProjectsView.vue'
+import SingleProjectView from './pages/SingleProjectView.vue'
 import NotFoundView from './pages/NotFoundView.vue'
 
 
@@ -29,6 +30,11 @@ const router = createRouter({
         path: '/contact',
         name: 'contact',
         component: ContactView
+      },
+      {
+        path: '/project/:slug',
+        name: 'single-project',
+        component: SingleProjectView
       },
       {
         path: '/:pathMatch(.*)*',
