@@ -15,7 +15,7 @@ export default {
         <section class="footer_top">
             <div class="container pt-5">
                 <div class="row ">
-                    <div class="col-7 footer_text_body p-3">
+                    <div class="col-12 col-md-7 footer_text_body p-3">
                         <h2> Lorem, ipsum dolor. </h2>
                         <h5 class="my-3">Lorem ipsum dolor sit amet.</h5>
                         <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nam totam modi quaerat laboriosam.
@@ -24,28 +24,28 @@ export default {
                             itaque.
                         </p>
                     </div>
-                    <div class="col-5 p-3">
-                        <div class="row p-3">
-                            <div class="col">
-                                <h6 class="">Portfolio - Rodrigo Fantechi</h6>
-                                <ul class="">
-                                    <li class="nav-item">
-                                        <router-link class="nav-link footer_link" :to="{ name: 'home' }" aria-current="page">Home
-                                            <span class="visually-hidden">(current)</span></router-link>
-                                    </li>
-                                    <li class="nav-item">
-                                        <router-link class="nav-link footer_link" :to="{ name: 'projects' }">Projects</router-link>
+                    <div class="col-12 col-md-5 p-3">
 
-                                    </li>
-                                    <li class="nav-item">
-                                        <router-link class="nav-link footer_link" :to="{ name: 'about' }">About</router-link>
-                                    </li>
-                                    <li class="nav-item">
-                                        <router-link class="nav-link footer_link" :to="{ name: 'contact' }">Contact Me</router-link>
-                                    </li>
-                                </ul>
-                            </div>
-                        </div>
+                        <h6 class="">Portfolio - Rodrigo Fantechi</h6>
+                        <ul class="">
+                            <li class="nav-item">
+                                <router-link class="nav-link footer_link" :to="{ name: 'home' }"
+                                    aria-current="page">Home
+                                    <span class="visually-hidden">(current)</span></router-link>
+                            </li>
+                            <li class="nav-item">
+                                <router-link class="nav-link footer_link"
+                                    :to="{ name: 'projects' }">Projects</router-link>
+
+                            </li>
+                            <li class="nav-item">
+                                <router-link class="nav-link footer_link" :to="{ name: 'about' }">About</router-link>
+                            </li>
+                            <li class="nav-item">
+                                <router-link class="nav-link footer_link" :to="{ name: 'contact' }">Contact
+                                    Me</router-link>
+                            </li>
+                        </ul>
                     </div>
                 </div>
 
@@ -118,9 +118,11 @@ footer {
 
     .footer_top {
         .footer_link {
+
+            // transition: 1s;
             &:hover {
                 position: relative;
-                left: 40px;
+                left: 30px;
                 transform: scale(1.1);
             }
         }
@@ -166,6 +168,7 @@ footer {
 
             a {
                 color: $clr-light;
+
             }
         }
     }

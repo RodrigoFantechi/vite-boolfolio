@@ -13,7 +13,7 @@ export default {
                             <img src="/img/logo.png" alt="">
                         </div>
                 </router-link> -->
-                <router-link class="navbar-brand" :to="{ name: 'home' }">Boolfolio</router-link>
+                <router-link class="navbar-brand" :to="{ name: 'home' }">Portfolio - RF</router-link>
 
                 <button class="navbar-toggler d-lg-none" type="button" data-bs-toggle="collapse"
                     data-bs-target="#collapsibleNavId" aria-controls="collapsibleNavId" aria-expanded="false"
