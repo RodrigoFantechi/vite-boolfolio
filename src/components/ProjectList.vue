@@ -36,7 +36,7 @@ export default {
                             </a>
                         </li>
 
-                    <li class="page-item" aria-current="page" v-for="page in store.projects.last_page" :class=" store.projects.current_page == page ? 'active' : ''" ><a class="page-link" href="#">{{page}}</a></li>
+                    <li class="page-item pointer" role="button" aria-current="page" v-for="page in store.projects.last_page" :class=" store.projects.current_page == page ? 'active' : ''" ><a class="page-link" @click="store.nextPage('http://127.0.0.1:8000/api/projects?page=' + page)">{{page}}</a></li>
                     
                     <li class="page-item" :class="store.projects.next_page_url ? '' : 'disabled'"
                             @click="store.nextPage(store.projects.next_page_url)">
