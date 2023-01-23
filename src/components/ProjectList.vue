@@ -23,30 +23,30 @@ export default {
         <div class="container p-5 ">
             <section v-if="store.projects && !store.loading">
                 <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-4 justify-content-center">
-                    <ProjectCard v-for="project in store.projects.data" :title='project.title'
+                    <ProjectCard v-for="(project, key) in  store.projects.data" :title='project.title'
                         :cover_image='project.cover_image' :description='project.description' :type='project.type'
                         :technologies='project.technologies' :slug="project.slug" />
                 </div>
                 <nav aria-label="Page navigation" class="d-flex justify-content-center pt-5">
-                    <ul class="pagination    ">
-                        <li class="page-item" v-if="store.projects.prev_page_url"
+                  <ul class="pagination">
+                    <li class="page-item" :class="store.projects.prev_page_url ? '' : 'disabled'"
                             @click="store.prevPage(store.projects.prev_page_url)">
                             <a class="page-link" aria-label="Previous">
                                 <span aria-hidden="true">&laquo;</span>
                             </a>
                         </li>
-                        <li class="page-item active" aria-current="page"><a class="page-link" href="#">{{
-                            store.projects.current_page
-                        }}</a></li>
 
-                        <li class="page-item" v-if="store.projects.next_page_url"
+                    <li class="page-item" aria-current="page" v-for="page in store.projects.last_page" :class=" store.projects.current_page == page ? 'active' : ''" ><a class="page-link" href="#">{{page}}</a></li>
+                    
+                    <li class="page-item" :class="store.projects.next_page_url ? '' : 'disabled'"
                             @click="store.nextPage(store.projects.next_page_url)">
                             <a class="page-link" aria-label="Next">
                                 <span aria-hidden="true">&raquo;</span>
                             </a>
                         </li>
-                    </ul>
+                  </ul>
                 </nav>
+
             </section>
             <section v-else-if="store.loading">
                 <div class="div">

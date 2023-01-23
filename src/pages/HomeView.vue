@@ -14,7 +14,7 @@ export default {
       </div>
       <div class="col-lg-6">
         <h1 class="display-5 fw-bold lh-1 mb-3">Home Page Portfolio</h1>
-        <p class="lead"> Dai primi progetti autodidattici in Java con Java Swing, posso finalmente presentare un portfolio "completo". Tra le tecnologie e i linguaggi utilizzati troviamo: Php, html, css, scss, Vue, Js, Laravel, Mysql ecc. Presenti ma non implementati piccoli progetti in Jquery, Flutter e Nuxt.</p>
+        <p class="lead"> Dai primi progetti autodidattici in Java con Java Swing, posso finalmente presentare un portfolio "completo". Tra le tecnologie e i linguaggi utilizzati troviamo: Php, html, css, scss, Vue, Js, Laravel, Mysql, Java ecc. Presenti ma non implementati piccoli progetti in Jquery, Flutter e Nuxt.</p>
       
         <div class="d-grid gap-2 d-md-flex justify-content-md-start">
           <a type="button"  href="#" class="btn btn-primary btn-lg px-4 me-md-2">To Github</a>
