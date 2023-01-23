@@ -1,5 +1,4 @@
 <script>
-
 export default {
     name: 'HomeView',
 
@@ -9,30 +8,34 @@ export default {
 
 
   <div class="container py-5">
-    <h1>Home Page</h1>
-    <p class="lead">
-      Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero, adipisci optio, tempore maiores sit asperiores
-      sed est nulla esse quos quam laudantium, voluptatibus minus officiis assumenda. Ex vitae eos earum.
-    </p>
-    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias iure, eius quo sint explicabo, ratione non eum
-      cumque tempora laboriosam aliquam saepe quasi recusandae natus officia voluptate? Perspiciatis quasi laborum enim
-      similique obcaecati harum aperiam delectus velit exercitationem! Nobis a natus ullam qui fuga fugit cumque quos
-      amet possimus distinctio, pariatur eaque deleniti voluptate corporis illo tempore aspernatur temporibus nesciunt
-      iure! Fugit numquam corrupti sit aliquam aspernatur laboriosam odit, vero at culpa laborum error impedit adipisci
-      laudantium sint? Voluptatum eaque nostrum sapiente doloribus iste, rerum reiciendis animi, tempora molestias
-      libero at nisi dolores quaerat sit officiis mollitia optio numquam. Suscipit autem expedita nesciunt in, dolorem
-      nisi libero assumenda repellendus minus itaque! Tempore vitae animi commodi veritatis consectetur quas ad,
-      deleniti iure porro quo enim cupiditate quam, laudantium vel illum doloribus, repellendus accusamus aut. Assumenda
-      hic rem quidem qui suscipit dolor maxime ab odio voluptatem consectetur velit ipsa numquam, sunt eaque quae
-      necessitatibus molestias dolores nobis quia maiores corporis repellat molestiae magnam. Vitae sequi ipsa quod
-      similique. Architecto dolores maxime sunt beatae laboriosam. Aliquid ut aut aspernatur minima soluta consectetur
-      ipsa magnam, debitis inventore! Neque, temporibus quia, ipsum eveniet tempora sint dolorem officia recusandae
-      numquam facilis vel ipsam! Similique, assumenda quidem!</p>
+    <div class="row flex-lg-row-reverse align-items-center g-5 py-5">
+      <div class="col-10 col-sm-8 col-lg-6">
+ 
+      </div>
+      <div class="col-lg-6">
+        <h1 class="display-5 fw-bold lh-1 mb-3">Home Page Portfolio</h1>
+        <p class="lead"> Dai primi progetti autodidattici in Java con Java Swing, posso finalmente presentare un portfolio "completo". Tra le tecnologie e i linguaggi utilizzati troviamo: Php, html, css, scss, Vue, Js, Laravel, Mysql ecc. Presenti ma non implementati piccoli progetti in Jquery, Flutter e Nuxt.</p>
+      
+        <div class="d-grid gap-2 d-md-flex justify-content-md-start">
+          <a type="button"  href="#" class="btn btn-primary btn-lg px-4 me-md-2">To Github</a>
+          <a type="button" href="#" class="btn btn-outline-secondary btn-lg px-4">Send Message</a>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="banner">
+
   </div>
 </template>
 
 
 
-<style lang="">
-    
+<style lang="scss" scoped>
+    .banner{
+      width: 100%;
+      height: 300px;
+      background-image: url(/img/space.gif);
+      background-repeat: no-repeat;
+      background-size: cover;
+    }
 </style>

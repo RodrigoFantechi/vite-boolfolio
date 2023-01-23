@@ -32,7 +32,7 @@ export default {
                 <p v-else>Tipo: Nessun tipo associato</p>
                 <div v-if="technologies.length > 0" class="my-3">
                     <span>Tecnologie:</span>
-                    <span v-for="singletechnology in technologies" class="mx-1">{{ singletechnology.name }},</span>
+                    <span v-for="singletechnology in technologies" class="mx-1">#{{ singletechnology.name }}</span>
                 </div>
                 <p v-else >Tecnologie: Nessuna tecnologia associata</p>
                 <router-link class="btn btn-primary" :to="{ name: 'single-project', params: { slug: slug } }">Read more</router-link>

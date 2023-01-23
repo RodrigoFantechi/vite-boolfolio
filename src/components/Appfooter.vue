@@ -15,16 +15,17 @@ export default {
         <section class="footer_top">
             <div class="container pt-5">
                 <div class="row ">
-                    <div class="col-12 col-md-7 footer_text_body p-3">
-                        <h2> Lorem, ipsum dolor. </h2>
-                        <h5 class="my-3">Lorem ipsum dolor sit amet.</h5>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nam totam modi quaerat laboriosam.
-                            Delectus
-                            aliquid incidunt nulla vitae laborum, quos ab id quaerat et illo distinctio porro, iure eos
-                            itaque.
-                        </p>
+                    <div class="col-12 col-md-7 footer_text_body p-3 ps-5">
+                        <h2> L'opportunità di crescere insieme</h2>
+                        <h5 class="my-3">Contatti personali diretti:</h5>
+                        <p class="mb-0"> </p>
+                        <p>E-mail: </p>
+                        <div class="icon">
+                            <a href="#"><font-awesome-icon icon="fa-brands fa-square-github"  class="fs-3 me-2"/></a>
+                            <a href="#"><font-awesome-icon icon="fa-brands fa-linkedin" class="fs-3"/></a>
+                        </div>
                     </div>
-                    <div class="col-12 col-md-5 p-3">
+                    <div class="col-12 col-md-3 p-3 border-start">
 
                         <h6 class="">Portfolio - Rodrigo Fantechi</h6>
                         <ul class="">
@@ -113,6 +114,10 @@ export default {
 @use '../assets/scss/variables' as *;
 
 footer {
+ a{
+    text-decoration: none;
+    color: white;
+ }
 
 
 

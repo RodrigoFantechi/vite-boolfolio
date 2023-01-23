@@ -22,7 +22,7 @@ export default {
     <main>
         <div class="container p-5 ">
             <section v-if="store.projects && !store.loading">
-                <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-4">
+                <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-4 justify-content-center">
                     <ProjectCard v-for="project in store.projects.data" :title='project.title'
                         :cover_image='project.cover_image' :description='project.description' :type='project.type'
                         :technologies='project.technologies' :slug="project.slug" />
