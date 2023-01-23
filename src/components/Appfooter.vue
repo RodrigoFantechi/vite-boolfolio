@@ -127,7 +127,7 @@ footer {
             // transition: 1s;
             &:hover {
                 position: relative;
-                left: 30px;
+                left: 25px;
                 transform: scale(1.1);
             }
         }
