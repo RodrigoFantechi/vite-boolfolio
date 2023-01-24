@@ -74,10 +74,10 @@ export default {
 </script>
 <template>
    <div class="container">
-            <div class="slider-wrapper d-flex" tabindex="0" @mouseenter="stopAutoPlay" @mouseleave="startAutoPlay" >
+            <div class="slider-wrapper d-flex rounded" tabindex="0" @mouseenter="stopAutoPlay" @mouseleave="startAutoPlay" >
 
-                <div class="item">
-                    <img :src="  slides[imageActive].image" :alt="slides[imageActive].title" />
+                <div class="item rounded-start">
+                    <img class="rounded-start" :src="  slides[imageActive].image" :alt="slides[imageActive].title" />
                     <div class="text">
                         <h3>{{slides[imageActive].title}}</h3>
                         <p>
@@ -86,11 +86,11 @@ export default {
                     </div>
                 </div>
 
-                <div class="thumbs">
+                <div class="thumbs rounded-end">
                     <div class="prev" @click="prevImage"></div>
                     <div class="next" @click="nextImage"></div>
 
-                    <div class="thumb" :class="imageActive ===index  ? 'active' : ''" v-for="(img, index) in slides" @click="openImage(index)"><img :src="img.image" :alt="img.title"></div>
+                    <div class="thumb rounded-end"  :class="imageActive ===index  ? 'active' : ''" v-for="(img, index) in slides" @click="openImage(index)"><img  class="rounded-end" :src="img.image" :alt="img.title"></div>
                 </div>
             </div>
         </div>
@@ -101,7 +101,9 @@ export default {
     justify-content: center;
     align-items: center;
 }
-
+// img{
+//     max-width: 572.62px;
+// }
 .item {
     float: left;
     width: 700px;
