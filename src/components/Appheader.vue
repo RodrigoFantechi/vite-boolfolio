@@ -6,7 +6,7 @@ export default {
 </script>
 <template>
     <header>
-        <nav class="navbar navbar-expand-sm navbar-dark bg-dark">
+        <nav class="navbar navbar-expand-sm navbar-dark">
             <div class="container">
                 <!-- <router-link class="navbar-brand" :to="{ name: 'home' }">
                         <div class="logo d-flex justify-content-center align-item-center">
@@ -47,6 +47,10 @@ export default {
 
 </template>
 <style lang="scss" scoped>
+@use '../assets/scss/variables' as *;
+
+
+
 // img {
 //     width: 30px;
 //     object-fit: contain;
@@ -63,4 +67,7 @@ export default {
 //     box-shadow: inset 0px 0px 0px 2px white;
 
 // }
+nav{
+    background-color: $clr-dark-0;
+}
 </style>

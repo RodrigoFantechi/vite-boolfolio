@@ -49,8 +49,8 @@ export default {
                         </ul>
                     </div>
                 </div>
-
-                <div class="svg">
+            </div>
+            <div class="svg">
                     <svg id="wave" style="transform:rotate(0deg); transition: 0.3s" viewBox="0 0 1440 290" version="1.1"
                         xmlns="http://www.w3.org/2000/svg">
                         <defs>
@@ -91,7 +91,6 @@ export default {
                         </path>
                     </svg>
                 </div>
-            </div>
 
         </section>
         <section class="bottom_footer">
@@ -133,7 +132,10 @@ footer {
         }
 
         color: $clr-light-1;
-        background-color: $clr-dark-1;
+        // background-color: $clr-dark-1;
+        background-image: url(./img/space.gif);
+        background-repeat: no-repeat;
+        background-size: cover;
 
         .container {
             position: relative;

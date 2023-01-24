@@ -1,6 +1,12 @@
 <script>
+
+import AppSlider from '../components/AppSlider.vue';
 export default {
     name: 'HomeView',
+    components:{
+      AppSlider,
+    },
+
 
 }
 </script>
@@ -10,7 +16,6 @@ export default {
   <div class="container py-5">
     <div class="row flex-lg-row-reverse align-items-center g-5 py-5">
       <div class="col-10 col-sm-8 col-lg-6">
- 
       </div>
       <div class="col-lg-6">
         <h1 class="display-5 fw-bold lh-1 mb-3">Home Page Portfolio</h1>
@@ -23,19 +28,16 @@ export default {
       </div>
     </div>
   </div>
-  <div class="banner">
-
+  <div class="slider">
+    <AppSlider/>
   </div>
 </template>
 
 
 
 <style lang="scss" scoped>
-    .banner{
-      width: 100%;
-      height: 300px;
-      background-image: url(/img/space.gif);
-      background-repeat: no-repeat;
-      background-size: cover;
+@use '../assets/scss/variables' as *;
+    h1{
+  color: $clr-dark-0;
     }
 </style>

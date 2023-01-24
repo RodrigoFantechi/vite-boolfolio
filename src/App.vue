@@ -1,4 +1,5 @@
 <script>
+import {store} from './store.js' 
 import AppHeader from './components/AppHeader.vue';
 import AppFooter from './components/AppFooter.vue';
 export default {
@@ -7,7 +8,15 @@ export default {
         AppHeader,
         AppFooter,
     },
-   
+    data() {
+    return {
+      store,
+    }
+  },
+    mounted() {
+
+    setInterval(store.mouveSlider,50);
+  },
 }
 </script>
 
