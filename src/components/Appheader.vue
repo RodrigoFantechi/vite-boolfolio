@@ -13,7 +13,7 @@ export default {
                             <img src="/img/logo.png" alt="">
                         </div>
                 </router-link> -->
-                <router-link class="navbar-brand" :to="{ name: 'home' }">Portfolio - RF</router-link>
+                <router-link class="navbar-brand" :to="{ name: 'home' }"><div class="image"><img src="/img/logo.png" alt=""></div></router-link>
 
                 <button class="navbar-toggler d-lg-none" type="button" data-bs-toggle="collapse"
                     data-bs-target="#collapsibleNavId" aria-controls="collapsibleNavId" aria-expanded="false"
@@ -49,7 +49,14 @@ export default {
 <style lang="scss" scoped>
 @use '../assets/scss/variables' as *;
 
-
+.image{
+    width: 80px;
+    aspect-ratio: 1/1;
+    img{
+        
+        object-fit: cover;
+    }
+}
 
 // img {
 //     width: 30px;
@@ -68,6 +75,11 @@ export default {
 
 // }
 nav{
-    background-color: $clr-dark-0;
+    // background-color: $clr-dark-0;
+    background-image: url(/img/bg_nav.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+
 }
 </style>
