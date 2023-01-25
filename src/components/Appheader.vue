@@ -58,24 +58,7 @@ export default {
     }
 }
 
-// img {
-//     width: 30px;
-//     object-fit: contain;
-// }
-
-// .logo {
-//     background: rgb(132, 76, 130);
-//     background: linear-gradient(0deg, rgba(132, 76, 130, 1) 0%, rgba(255, 179, 11, 1) 100%);
-//     width: 50px;
-//     height: 50px;
-//     aspect-ratio: 1/1;
-//     border: 1px solid black;
-//     border-radius: 50%;
-//     box-shadow: inset 0px 0px 0px 2px white;
-
-// }
 nav{
-    // background-color: $clr-dark-0;
     background-image: url(/img/bg_nav.png);
     background-repeat: no-repeat;
     background-size: cover;
