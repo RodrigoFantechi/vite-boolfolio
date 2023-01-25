@@ -14,7 +14,7 @@ export default {
     },
 
     mounted() {
-        store.callAxios(store.url);
+        store.callAxios(store.base_api_url+'/api/projects');
     }
 }
 </script>
@@ -49,7 +49,7 @@ export default {
 
             </section>
             <section v-else-if="store.loading">
-                <div class="div">
+                <div>
                     <span class="fs-3">Loading...</span>
                     <div class="svg ms-3 d-inline-block">
                         <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"

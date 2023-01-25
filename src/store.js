@@ -1,11 +1,22 @@
 import { reactive } from 'vue'
 import axios from 'axios'
 export const store = reactive({
-  max: 100,
+
+  // EMAIL
+  error_message:'',
+  success:false,
+  loadingemail:false,
+  name:'',
+  email:'',
+  message:'',
+
+  // PROJECT
+  error:'',
   projects: '',
   loading: true,
   base_api_url: 'http://127.0.0.1:8000',
-  url: 'http://127.0.0.1:8000/api/projects',
+
+  // SLIDER 
   slider: [
     {
       icon: 'fa-brands fa-facebook-f',
@@ -37,7 +48,7 @@ export const store = reactive({
     },
   ],
 
-
+  // PROJECT
   callAxios(call) {
     axios.get(call)
       .then(response => {
@@ -66,11 +77,13 @@ export const store = reactive({
     store.callAxios(url)
   },
   checkText(text) {
-    if (text.length > store.max) {
-      return text.slice(0, store.max) + '...'
+    if (text.length > 100) {
+      return text.slice(0, 100) + '...'
     }
     return text
   },
+
+  // SLIDER 
   mouveSlider() {
     store.slider.forEach(element => {
       element.position++
@@ -79,5 +92,34 @@ export const store = reactive({
       }
     });
   },
+
+  // EMAIL
+  sendForm(){
+    store.loadingemail = true
+    store.success = false
+    store.error_message = ''
+    const data ={
+      name: store.name,
+      email: store.email,
+      message: store.message,
+    }
+    
+    axios.post(store.base_api_url + '/api/contacts', data)
+    .then(response => {
+      console.log(response);
+      store.success = response.data.success
+
+      if (store.success) {
+        store.name = ''
+        store.message = ''
+        store.email = ''
+      }else{
+        store.error_message = response.data.errors;
+        console.log(store.error_message);
+
+      }
+      store.loadingemail = false
+    })
+  }
   
 })

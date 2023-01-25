@@ -24,7 +24,7 @@ export default {
 
           <div class="d-grid gap-2 d-md-flex justify-content-md-start">
             <a type="button" href="#" class="btn btn-primary btn-lg px-4 me-md-2">To Github</a>
-            <a type="button" href="#" class="btn btn-outline-secondary btn-lg px-4">Send Message</a>
+            <router-link class="btn btn-outline-secondary btn-lg px-4" :to="{ name: 'contact' }">Send Message</router-link>
           </div>
         </div>
       </div>
