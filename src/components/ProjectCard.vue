@@ -21,7 +21,7 @@ export default {
 </script>
 <template >
     <div class="col">
-        <div class="card h-100 text-center p-3 shadow-sm">
+        <div class="card h-100 text-center p-4 shadow-sm">
             <div class="image mx-auto">
                 <img width="150" class="card-image rounded-top" :src="store.getImagePath(cover_image)" alt="">
             </div>
@@ -34,12 +34,32 @@ export default {
                     <span>Tecnologie:</span>
                     <span v-for="singletechnology in technologies" class="mx-1">#{{ singletechnology.name }}</span>
                 </div>
-                <p class="text-muted" v-else >Tecnologie: Nessuna tecnologia associata</p>
-                <router-link class="btn btn-primary" :to="{ name: 'single-project', params: { slug: slug } }">Read more</router-link>
+                <p class="text-muted" v-else>Tecnologie: Nessuna tecnologia associata</p>
+                <router-link class="mybtn" :to="{ name: 'single-project', params: { slug: slug } }">Read
+                    more</router-link>
             </div>
         </div>
     </div>
 </template>
-<style lang="">
-    
+<style lang="scss" scoped>
+@use '../assets/scss/variables' as *;
+
+.card {
+    position: relative;
+
+    .mybtn {
+        position: absolute;
+        left: 50%;
+        bottom: 20px;
+        transform: translateX(-50%);
+        color: white;
+        border-radius: 10px;
+        padding: 0.5rem 0.75rem;
+        text-decoration: none;
+        display: inline-block;
+        background-color: $clr_primary5;
+  
+    }
+
+}
 </style>

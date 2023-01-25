@@ -37,7 +37,7 @@ export default {
           <AppCarousel />
         </div>
         <div class="col-lg-6">
-          <h2 > Esempio di carousel da fixare --></h2>
+          <h2 >Carosello da fixare --></h2>
         </div>
       </div>
     </div>

@@ -71,7 +71,7 @@ export default {
       <p v-for="error in store.error_message.message" class="alert alert-danger">
                     {{ error }}
                 </p>
-      <button class="btn btn-primary" @click="store.sendForm()">Contact Me</button>
+      <button class="mybtn" @click="store.sendForm()">Contact Me</button>
     </section>
   </div>
 
@@ -79,5 +79,14 @@ export default {
 </template>
 
 <style lang="scss" scoped>
-
+@use '../assets/scss/variables' as *;
+    .mybtn {
+        color: white;
+        border-radius: 10px;
+        padding: 0.5rem 0.75rem;
+        text-decoration: none;
+        display: inline-block;
+        background-color: $clr_primary5;
+        border: none;
+    }
 </style>

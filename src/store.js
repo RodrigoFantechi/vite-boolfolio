@@ -77,8 +77,8 @@ export const store = reactive({
     store.callAxios(url)
   },
   checkText(text) {
-    if (text.length > 100) {
-      return text.slice(0, 100) + '...'
+    if (text.length > 80) {
+      return text.slice(0, 80) + '...'
     }
     return text
   },

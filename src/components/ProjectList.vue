@@ -76,7 +76,11 @@ export default {
     </main>
 </template>
 <style lang="scss" scoped>
-// main{
-//     background-image: url(/img/pattern1.png);
-// }
+@use '../assets/scss/variables' as *;
+.page-link.active, .active > .page-link {
+
+    
+    background-color: $clr_primary5;
+    border-color: $clr_primary5;
+}
 </style>

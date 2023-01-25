@@ -19,6 +19,7 @@ export default {
                         <h2> L'opportunità di crescere insieme</h2>
                         <h5 class="my-3">Contatti personali diretti:</h5>
                         <p class="mb-0"> </p>
+                        <p>Tel.: </p>
                         <p>E-mail: </p>
                         <div class="icon">
                             <a href="#"><font-awesome-icon icon="fa-brands fa-square-github"  class="fs-3 me-2"/></a>
